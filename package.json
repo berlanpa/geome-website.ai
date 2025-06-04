@@ -1,0 +1,11 @@
+{
+  "name": "david-ai-contact-form",
+  "version": "1.0.0",
+  "description": "Contact form handler for Geome website",
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  },
+  "scripts": {
+    "build": "echo 'No build process needed'"
+  }
+} 

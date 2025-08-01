@@ -1795,28 +1795,9 @@
                const email = emailInput.value.trim();
                
                if (email) {
-                  // Here you would typically send the email to your backend
-                  // For now, we'll just show a success message
-                  console.log('Email submitted:', email);
-                  
-                  // Store email in localStorage (you can replace this with actual backend integration)
-                  let waitlistEmails = JSON.parse(localStorage.getItem('waitlistEmails') || '[]');
-                  if (!waitlistEmails.includes(email)) {
-                     waitlistEmails.push(email);
-                     localStorage.setItem('waitlistEmails', JSON.stringify(waitlistEmails));
-                  }
-                  
-                  // Show success message
-                  form.style.display = 'none';
-                  successMessage.style.display = 'block';
-                  
-                  // Close modal after 3 seconds
-                  setTimeout(() => {
-                     modal.style.display = 'none';
-                     form.style.display = 'flex';
-                     successMessage.style.display = 'none';
-                     emailInput.value = '';
-                  }, 3000);
+                  // Redirect to the specified URL with the email
+                  const url = `https://wilddome.com/join/${encodeURIComponent(email)}`;
+                  window.location.href = url;
                }
             });
          });
